@@ -1,0 +1,18 @@
+.contact{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    color: white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact > p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+.contact:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}

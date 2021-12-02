@@ -1,0 +1,60 @@
+.chat_model, .contact_model{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    padding: 30px;
+}
+.contact_model{
+    justify-content: center;
+}
+.chatName_input, .contactModel_input{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.chatName_input > input,
+.contactModel_input > input{
+    height: 100%;
+    flex: 1;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding-left: 10px;
+    color: white;
+}
+.chat_contacts{
+    margin-top: 20px;
+    height: 150px;
+    overflow-y: scroll;
+}
+.chat_contacts > div{
+    padding: 10px;
+    transition: 0.2s;
+    border-bottom: 1px solid white;
+}
+.chat_contacts > div:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.chat_contacts::-webkit-scrollbar{
+    display: none;
+}
+.error_message{
+    border: 1px solid red;
+    height: 60px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+    opacity: 0;
+}
+.error_message.active{
+    opacity: 1;
+}
+.model_btn{
+    margin-top: 20px !important;
+}

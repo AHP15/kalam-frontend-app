@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+.dashboard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+}
+.dashboard_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.dashboard_header > h1{
+    cursor: pointer;
+}
+.dashboard_header > div{
+    width: 50%;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dashboard_header > div > p{
+    font-size: 18px;
+}
+.logout{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.logout:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.dashboard > section{
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+@media (min-width:601px) {
+    .dashboard_room{
+        position: absolute;
+        inset: 0 0 0 350px;
+    }
+}
+
+@media (max-width:400px) {
+    .dashboard_header > div > p{
+        font-size: 16px;
+    }
+}

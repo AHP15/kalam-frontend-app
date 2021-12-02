@@ -1,0 +1,106 @@
+@media (min-width: 300px) {
+    .sidebar{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar_nav{
+        display: flex;
+        align-items: center;
+    }
+    .sidebar_nav > p{
+        flex: 1;
+        padding: 20px;
+        color: white;
+        cursor: pointer;
+        border-bottom: 1px solid white;
+    }
+    .sidebar_nav .sidebar_chats,.sidebar_nav .sidebar_contacts{
+        opacity: 0.8;
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+    .sidebar_nav .sidebar_contacts{
+        border-right: none;
+        border-left: 1px solid white;
+    }
+    .sidebar_contents{
+        flex: 1;
+        overflow-y: scroll;
+        max-height: calc(100vh - 180px);
+    }
+    .sidebar_contents::-webkit-scrollbar{
+        display: none;
+    }
+    .sidebar_btn{
+        padding: 10px !important;
+    }
+    .overlay{
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .sidebar_model{
+        position: absolute;
+        inset: 100px 5px;
+        max-width: 500px;
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: 2;
+        border-radius: 20px;
+        transform: scale(0);
+        transition: 0.2s;
+    }
+    .sidebar_model.active{
+        transform: scale(1);
+    }
+    .model_close{
+        height: 40px;
+        width: 40px;
+        float: right;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    .model_close::after, .model_close::before{
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: 4px;
+        background-color: white;
+        top: 45%;
+        left: 0;
+    }
+    .model_close::after{
+        transform: rotate(45deg);
+    }
+    .model_close::before{
+        transform: rotate(-45deg);
+    }
+}
+
+@media (min-width:601px) {
+    .sidebar{
+        max-width: 350px;
+    }
+    .sidebar_model{
+        left: 30%;
+        right: 30%;
+    }
+}
+
+.chat{
+    height: 70px;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.chat:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}

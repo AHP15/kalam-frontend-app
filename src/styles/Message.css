@@ -1,0 +1,34 @@
+
+
+.message{
+    display: flex;
+    justify-content: flex-start;
+}
+.message_content{
+    max-width: 250px;
+    min-width: 100px;
+    width: fit-content;
+    margin: 20px;
+    padding: 10px 25px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+}
+.message_user{
+    position: absolute;
+    top: -22px;
+    right: -10px;
+    font-size: 14px;
+}
+.other{
+    left: -10px;
+    right: auto;
+}
+.from_me{
+   justify-content: flex-end;
+}
+.from_me .message_content{
+    background-color: rgb(0, 30, 60);
+    color: white;
+}
