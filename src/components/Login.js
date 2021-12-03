@@ -50,6 +50,7 @@ function Login({hide}){
             setPassword("");
             setLoading(false);
             dispatch(SET_USER(data));
+            window.location.reload();
         })
         .catch(error => {
             const message = (
