@@ -21,7 +21,11 @@
     height: calc(100% - 100px);
     overflow-y: scroll;
 }
-
+@media (max-width:601px) {
+    .chatroom_msg{
+        max-height: calc(100vh - 100px);
+    }
+}
 
 .chatroom_form > form{
     width: 100%;
