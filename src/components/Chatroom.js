@@ -15,7 +15,7 @@ import tokenService from "../services/token.service.js";
 import Message from "./Message.js";
 
 //https://kalam-socket.herokuapp.com/
-const socket = io("http://localhost:8081/", {
+const socket = io("https://kalam-socket.herokuapp.com/", {
     auth: {
         token: tokenService.getLocalAccessToken(),
     }
