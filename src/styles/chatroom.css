@@ -23,7 +23,7 @@
 }
 @media (max-width:601px) {
     .chatroom_msg{
-        max-height: calc(100vh - 100px);
+        max-height: 600px;
     }
 }
 
