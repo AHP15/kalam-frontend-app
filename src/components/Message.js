@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import { selectUser } from "../slices/user.slice.js";
 import "../styles/Message.css";
+import React from "react";
 
-function Message({message}) {
+const Message = React.memo(function Message({message}) {
     const user = useSelector(selectUser);
     const from_me = message.user === user.username;
 
@@ -14,6 +15,6 @@ function Message({message}) {
             </div>
         </div>
     );
-}
+})
 
 export default Message;
